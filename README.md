@@ -1,9 +1,10 @@
-```markdown
+# Ecliptor AI: Your Marketing Game-Changer
+
 ![Ecliptor Header](https://pbs.twimg.com/profile_banners/1869943175500169216/1734665004/1500x500)
 
-![Ecliptor Logo](https://pbs.twimg.com/profile_images/1869945588051066880/kdvqSDzH_400x400.png)
-
-# Ecliptor AI: Your Marketing Game-Changer
+<p align="center">
+  <img src="https://pbs.twimg.com/profile_images/1869945588051066880/kdvqSDzH_400x400.png" alt="Ecliptor Logo" width="150">
+</p>
 
 [![Follow Us on Twitter](https://img.shields.io/twitter/url?label=Follow%20Us&style=social&url=https://x.com/Ecliptor_ai)](https://x.com/Ecliptor_ai)  
 [Visit Our Website](http://ecliptor.me/)
@@ -117,5 +118,3 @@ Contributions to Ecliptor AI are welcome! Please feel free to submit a Pull Requ
 
 ## License
 This project is licensed under the MIT License - see the LICENSE file for details.
-```
-
