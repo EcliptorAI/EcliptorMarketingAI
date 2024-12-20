@@ -1,72 +1,121 @@
-# Solana Agent
+```markdown
+![Ecliptor Header](https://pbs.twimg.com/profile_banners/1869943175500169216/1734665004/1500x500)
 
-[![Solana Swarm]([https://cdn.cometheart.com/solana-agent-logo.jpg)](https://solana-agent.com)
+![Ecliptor Logo](https://pbs.twimg.com/profile_images/1869945588051066880/kdvqSDzH_400x400.png)
 
-## Why Solana Agent
+# Ecliptor AI: Your Marketing Game-Changer
 
-### Batteries Included
-* Based on CyberChipped - a Python OpenAI Assistant Framework
-* Provides conversational memory, parallel function calling, smart automatic tool choice, and message history using MongoDB
-* Utilizes FastAPI and Next.js - the most popular and supported web frameworks 
-* Quickly add custom functions to your AI agent in a few lines of code
-* Solana Agent Actions: 
-    * Transfer tokens from the Agent wallet to other wallets - via Helius
-    * Swap tokens inside the Agent wallet - via Jupiter and Helius
-* Social Integrations: 
-    * X - via the X API (Basic Plan)
+[![Follow Us on Twitter](https://img.shields.io/twitter/url?label=Follow%20Us&style=social&url=https://x.com/Ecliptor_ai)](https://x.com/Ecliptor_ai)  
+[Visit Our Website](http://ecliptor.me/)
 
-### Better than Eliza
-* Solana Agent requires no-code changes, only adding simple environment variables, and MongoDB/Redis to work out of the box for a complete AI Agent with real-time chat
-* Solana Agent's conversational history is superior to RAG for user interactivity, tool usage, and agent memory/recall/context
-* Solana Agent's parallel tool calling and automatic AI tool choice is superior than using any LLM completion API with tool usage from any provider
-* Solana Agent is an opinionated framework with one way to do things to keep things simple
-* Solana Agent is written in Python the most popular language on GitHub and in the AI field
-* Solana Agent replies on X in real-time and only replies when it should
+---
 
-## Local Dev
+## Why Choose Ecliptor AI?
 
-###  Run locally on Mac or Linux
-* Clone this repo - `git clone https://github.com/truemagic-coder/solana-agent`
-* Ensure the latest LTS Node is installed with yarn
-* Ensure Python 3.12.7 is installed with poetry
-* Ensure Docker and Docker Compose are installed
-* `docker-compose up -d`
-* Rename `.env.sample` to `.env` in `site` and `agent`
-* Get and set the PRIVATE_KEY (in base58 string format) in the `site` folder for `.env` file - if you want Solana Actions like sending tokens and swapping with funds from this wallet
-* Get and set the OPENAI_API_KEY var in the `agent` folder for `.env` file - [OpenAI API Keys](https://platform.openai.com/api-keys)
-* Get and set the HELIUS_API_KEY and HELIUS_RPC_URL in both folders `.env` files - [Helius](https://helius.dev)
-* If you want XBot - then setup a X developer account and setup the keys in `agent` folder for `.env` file - and uncomment the code in `main.py`
-* Set all the secrets to match between the `.env` files and make them `uuidv4`s or other strong keys
-* Open two terminal windows
-* `Terminal 1`: `cd site && yarn install && yarn dev`
-* `Terminal 2`: `cd agent && poetry install && bash ./dev.sh`
-* Open your browser to `http://localhost:3000`
+### AI-Driven Intelligence
+Leverage advanced AI algorithms to understand customer behavior and optimize marketing strategies in real-time.
+
+### Targeted Campaigns
+Launch precision-targeted marketing campaigns using blockchain-verified customer insights and engagement data.
+
+### Loyalty Programs
+Create tokenized loyalty programs that reward customer engagement and build lasting relationships.
+
+---
+
+## Key Features
+
+### Analytics Dashboard
+Track campaign performance and customer engagement with transparent, blockchain-based analytics.
+
+### AI-Powered Marketing Suite
+Transform your marketing strategy with our comprehensive suite of AI-powered tools and blockchain-verified analytics.
+
+| Feature                | Description                                                                 |
+|------------------------|-----------------------------------------------------------------------------|
+| **Predictive Analytics** | AI-powered trend forecasting to stay ahead of market movements.            |
+| **Smart Audience Targeting** | Advanced segmentation using blockchain-verified data for precise targeting. |
+| **AI Content Generation** | Create engaging marketing content optimized for your audience.            |
+| **Performance Tracking** | Real-time analytics and ROI tracking with blockchain transparency.         |
+| **Automated Campaigns** | Set up and optimize campaigns automatically based on AI insights.           |
+
+---
+
+## Advanced Integrations
+
+### Cross-Channel Integration
+Seamlessly integrate and coordinate marketing efforts across multiple platforms.
+
+### AI-Powered Core
+Advanced machine learning algorithms analyze market trends and user behavior in real-time.
+
+### Secure Infrastructure
+Built on blockchain technology ensuring transparent and secure transactions.
+
+---
+
+## Rapid Deployment
+
+| Advantage             | Details                                                                       |
+|-----------------------|-------------------------------------------------------------------------------|
+| **Ease of Use**       | Launch marketing campaigns with one click using our intuitive platform.      |
+| **Real-Time Analytics** | Monitor performance and adjust strategies instantly.                        |
+| **Powerful Ecosystem** | Combines AI intelligence with blockchain security for unparalleled results. |
+
+---
+
+## Local Development
+
+### Run Locally
+* Clone this repo: `git clone https://github.com/ecliptor-ai/ecliptor`
+* Ensure the latest LTS Node is installed with yarn.
+* Ensure Python 3.12.7 is installed with poetry.
+* Install Docker and Docker Compose.
+* Run `docker-compose up -d`.
+* Rename `.env.sample` to `.env` in both `site` and `agent` directories.
+* Set the necessary API keys:
+  * **OPENAI_API_KEY**: For AI functionality.
+  * **HELIUS_API_KEY** and **HELIUS_RPC_URL**: For blockchain integrations.
+* Open two terminal windows:
+  * **Terminal 1**: `cd site && yarn install && yarn dev`
+  * **Terminal 2**: `cd agent && poetry install && bash ./dev.sh`
+* Access the platform at `http://localhost:3000`.
+
+---
 
 ## Deploy
 
 ### Deploy to Heroku or Dokku
-* Provision a MongoDB and Redis database
-* Get one domains with two sub-domains - one for the `site` and one for the `agent`
-* Add the proper env vars on Heroku or Dokku to your apps
-* Add your proper remotes in each folder locally (each folder `site` and `agent` should be their own repos - `git init`)
-* For each folder (`site` and `agent`) git commit and git push to the main branch
-* Make sure to ps:scale `worker` and `scheduler` to 1 (web should already be 1)
+* Provision MongoDB and Redis databases.
+* Set up domains with two sub-domains (one for `site`, one for `agent`).
+* Configure environment variables and secrets.
+* Push to the main branch of each folder.
+* Scale processes as required (`worker`, `scheduler`, `web`).
+
+---
 
 ## Advanced Topics
 
 ### Agent Functions
-* Use expressive snake-case names for the functions with expressive param names (if required)
-* Functions only take `str` params and must output a `str` (string)
-* Functions must be fully sync - you cannot use async libraries or methods - example: using `requests` not `httpx` (sync vs async)
-* Don't make tool outputs (strings) too large as when calling multiple calls in parallel has a size limit (combined)
-* Keep in mind the 128k model token input limit when processing data especially from APIs
-* OpenAI `gpt-4o` is recommended over `gpt-4o-mini` simply for AI IQ but if cost is a concern then mini may work for your agent usage
+* Use clear, expressive snake-case names for functions.
+* Functions must accept and return `str` types only.
+* Keep outputs concise to avoid size limits when calling functions in parallel.
+* Maintain within the 128k token limit for model input processing.
+* Opt for **gpt-4o** for higher IQ or **gpt-4o-mini** for cost efficiency.
+
+---
 
 ## Production Apps
-* [WB AI Agent](https://ai.walletbubbles.com)
+* [Ecliptor AI Agent](https://ecliptor.me)
+
+---
 
 ## Contributing
-Contributions to Solana Agent are welcome! Please feel free to submit a Pull Request.
+Contributions to Ecliptor AI are welcome! Please feel free to submit a Pull Request.
+
+---
 
 ## License
 This project is licensed under the MIT License - see the LICENSE file for details.
+```
+
