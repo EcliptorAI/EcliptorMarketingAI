@@ -1,6 +1,6 @@
 # Solana Agent
 
-[![Solana Swarm](https://cdn.cometheart.com/solana-agent-logo.jpg)](https://solana-agent.com)
+[![Solana Swarm]([https://cdn.cometheart.com/solana-agent-logo.jpg)](https://solana-agent.com)
 
 ## Why Solana Agent
 
